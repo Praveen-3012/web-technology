@@ -1,98 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel Room Booking</title>
-  <style>
-    body {
-      background-color: beige;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    form {
-      max-width: 600px;
-      margin: auto;
-      background-color: #fdfdfd;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    label {
-      display: block;
-      margin: 10px 0 5px;
-    }
-    input, select, textarea, progress {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .inline-group {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC University</title>
+    <style>
+      .header{
+        background-color:beige;
+        display: flex;
+        justify-content: space-between;
+      }
+      .container {
       display: flex;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
     }
-    .inline-group > * {
-      flex: 1;
+
+    .dept-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      background-color: #f9f9f9;
     }
-    .subheading {
-      font-size: 1.2em;
-      margin-top: 25px;
+
+    .dept-box img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .dept-name {
+      margin-top: 10px;
       font-weight: bold;
     }
-  </style>
+    ul {
+      display: inline-block;       
+      text-align: left;             
+      list-style-position: inside; 
+      padding-left: 0;          
+      margin: 20px auto;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+    </style>
 </head>
-<body>
-  <h1>Hotel Room Booking Form</h1>
-  <form action="/serverlogic" method="post">
-    
-    <div class="subheading">Personal Details</div>
-    <div class="inline-group">
-      <input type="text" name="firstname" placeholder="First Name" required autofocus>
-      <input type="text" name="lastname" placeholder="Last Name" required>
+<body style="background-color: cadetblue; text-align: center; font: size 80%;" >
+
+    <div class="header" >
+        <img src="logo.jpg" alt="University logo" width="100" onclick="location.reload();">
+
+        <h1>ABC UNIVERSITY </h1>
+        <p></p>
     </div>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}" maxlength="10">
+     <h2>ABOUT US</h2>
+     <br>
+     <img src="UNI.jpg" width="850px"; height="350px"><br><br>
+        <P>Welcome to our University — a place of learning, discovery, and innovation. With a commitment to academic excellence and holistic development, we offer a wide range of undergraduate, postgraduate, and research programs across diverse disciplines. 
+            Our campus fosters a vibrant community where students, faculty, and researchers thrive together to shape a better future.
+    We emphasize practical learning, industry collaboration, and global exposure to prepare students for real-world challenges. Our modern infrastructure, dedicated faculty, 
+    and inclusive environment support academic and personal growth. Through seminars, workshops, and cultural events, we encourage creativity and leadership. With a focus on values, integrity, and sustainability,
+    we aim to build responsible global citizens.</P><BR> <P>Join us in our journey of knowledge, progress, and lifelong learning.
+    Over the years, our university has earned a reputation for producing skilled graduates who excel in their fields and contribute meaningfully to society. We are proud of our diverse and inclusive student body,
+    representing various regions, cultures, and perspectives. Our research centers and innovation labs are actively engaged in solving real-world problems across science, technology, healthcare, and the humanities. We continually update 
+    our curriculum to match global standards and equip students with future-ready skills. As a community, we believe in nurturing not just minds, but character and purpose.</P>
+    <hr>
+        <h2>PROGRAMS</h2>
+        <br>
+    <p>Our university offers a diverse range of academic programs designed to meet today’s industry and research demands.
+We provide undergraduate, postgraduate, and doctoral programs across engineering, science, arts, and management.
+Each program is carefully structured to blend theoretical knowledge with practical application.
+Students benefit from modern labs, experienced faculty, and industry-aligned curriculum.
+Explore your interests and shape your future with a program that fits your passion and goals.
 
-    <div class="subheading">Room Preferences</div>
-    <label>Room Type:</label>
-    <input type="radio" name="roomtype" value="standard" required> Standard
-    <input type="radio" name="roomtype" value="deluxe"> Deluxe
-    <input type="radio" name="roomtype" value="suite"> Suite
+</p>
+    <div class="container">
+    <div class="dept-box">
+            <div class="dept-name">B.tech CSE</div>
+        </div>
+        <div class="dept-box">
+            <div class="dept-name">B.tech AIML</div>
+        </div>
+        <div class="dept-box">
+            <div class="dept-name">B.tech AIDS</div>
+        </div>
+        <div class="dept-box">
+            <div class="dept-name">B.tech mech</div>
+        </div>
+        <div class="dept-box">
+            <div class="dept-name">B.com ifcs</div>
+        </div>
+        <div class="dept-box">
+            <div class="dept-name">B.com management studies</div>
+        </div>
+    </div>
 
-    <label>Extra Facilities:</label>
-    <input type="checkbox" name="facilities" value="wifi"> Wi-Fi
-    <input type="checkbox" name="facilities" value="breakfast"> Breakfast
-    <input type="checkbox" name="facilities" value="ac"> AC
-    <input type="checkbox" name="facilities" value="tv"> TV
+    <h2>DEPARTMENTS</h2>
 
-    <label for="guests">Number of Guests:</label>
-    <select id="guests" name="guests" required>
-      <option value="">--Select--</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4+</option>
-    </select>
+<div class="container">
+  <div class="dept-box">
+    <img src="d1.jpg" alt="Agriculture">
+    <div class="dept-name">Computer Science and Engineering</div>
+  </div>
 
-    <label for="checkin">Check-in Date:</label>
-    <input type="date" id="checkin" name="checkin" required>
+  <div class="dept-box">
+        <img src="d2.jpg" alt="Agriculture">
+    <div class="dept-name">Artificial Intelligence</div>
+  </div>
 
-    <label for="checkout">Check-out Date:</label>
-    <input type="date" id="checkout" name="checkout" required>
+  <div class="dept-box">
+    <img src="d3.jpg" alt="Agriculture">
+    <div class="dept-name">Agriculture</div>
+  </div>
 
-    <label for="requests">Special Requests:</label>
-    <textarea id="requests" name="requests" rows="4" placeholder="Anything we should know?"></textarea>
+  <div class="dept-box">
+     <img src="d4.jpg" alt="Agriculture">
+    <div class="dept-name">Electrical and Electronics</div>
+  </div>
 
-    <label for="progress">Booking Completion:</label>
-    <progress id="progress" value="80" max="100"></progress>
+  <div class="dept-box">
+    <img src="d6.jpg" alt="Media">
+    <div class="dept-name">Media</div>
+  </div>
 
-    <div class="subheading">Submit</div>
-    <input type="submit" value="Book Now">
-    <input type="reset" value="Reset Form">
-  </form>
+  <div class="dept-box">
+    <img src="d5.jpg" alt="bio">
+    <div class="dept-name">Biotechnology</div>
+  </div>
+
+</div>
+
+    <hr>
+
+    <hr>
+    <h2>Facilites</h2>
+    <br>
+    <p>In our university we provide various facilites and technology, find yourself helpfull by reading below</p>
+    <ul>
+        <li>
+            Computer science laboratory<br>
+           
+        </li>
+        <li>Argiculture laboratory</li>
+        <li>Green house</li>
+        <li>Fields and farms</li>
+        <li>Auditorium</li>
+        <li>Canteen</li>
+        <li>xerox shop</li>
+        <li>stationary shop</li>
+        <li>hospitals</li>
+        <li>medicals</li>
+        <li>
+            Chemical laboratory<br>
+            
+        </li>
+    </ul>
+    <hr>
+    <h2>Campus Life</h2>
+    <br>
+    <img src="campus.jpg" width="650px"; height="350px"><br>
+    <ul>
+       
+        <li>🎓 Vibrant Academic Environment: Access to well-equipped labs, libraries, and smart classrooms.</li>
+        <li>🤝 Clubs & Communities: Join technical, cultural, and social clubs to explore your interests.</li>
+        <li>🏛️ Events & Festivals: Participate in college fests, workshops, and interdepartmental events throughout the year.</li>
+       
+        <li>☕ Cafeteria Culture: Relax with friends in a lively canteen offering a variety of food options.</li>
+        <li>🏃 Sports & Recreation: Facilities for indoor and outdoor sports like football, badminton, cricket, and gym.</li>
+        <li>📶 Wi-Fi Campus: Stay connected with high-speed internet across the campus.</li>
+        <Li>🏡 Hostel Life: Comfortable accommodation with 24/7 security and amenities like reading halls, mess, and recreation rooms.</Li>
+    </ul>
+<footer style="background-color: beige; text-align: center; padding: 15px; margin-top: 40px;">
+  
+  <p>
+    Contact: <a href="mailto:info@youruniversity.edu">info@youruniversity.edu</a> |
+    Phone: +91-12345-67890
+  </p>
+</footer>
+
 </body>
 </html>
